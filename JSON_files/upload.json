@@ -1,0 +1,29 @@
+{
+	"base_url": "http://demo.guru99.com/test/upload/",
+	"steps": [
+		{
+			"number": 1,
+			"xpath": "/html/body/div[2]/div/div/div[1]/form/div[2]/div[1]/div/div/input",
+			"wait": 30,
+			"operation": "SEND_KEYS",
+		},
+		{
+			"number": 2,
+			"xpath": "/html/body/div[2]/div/div/div[2]/form/ul/li/center/span/input",
+			"wait": 30,
+			"operation": "CLICK"
+		},
+		{
+			"number": 3,
+			"xpath": "/html/body/div[2]/div/div/div[2]/form/ul/li/div[1]/button",
+			"wait": 30,
+			"operation": "CLICK"
+		},
+		{
+			"number": 4,
+			"xpath": "/html/body/div/div",
+			"wait": 30,
+			"operation": "CLICK"
+		}
+	]
+}

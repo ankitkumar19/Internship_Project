@@ -1,0 +1,17 @@
+{
+	"base_url" : "https://www.makemytrip.com/",
+	"steps": [
+		{
+			"number": 1,
+			"xpath": "/html/body/div[1]/div/div[2]/div/div/div[2]/p/a",
+			"wait": 10,
+			"operation": "CLICK"
+		},
+		{
+			"number": 2,
+			"xpath": ".//*[contains(text(), 'Air India')]",
+			"wait": 10,
+			"operation": "CLICK"
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+	"filedir": [
+		/home/ankit/project/JSON_files/youtube.json,
+		/home/ankit/project/JSON_files/pdfdrive.json,
+		/home/ankit/project/JSON_files/upload.json,
+		/home/ankit/project/JSON_files/email.json
+	]
+}

@@ -1,0 +1,17 @@
+{
+	"base_url":"https://www.youtube.com",
+	"steps": [
+		{
+			"number": 1,
+			"xpath": "/html/body/ytd-app/div/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/form/div/div[1]/input",
+					"wait": 10,
+			"operation": "SEND_KEYS"
+		},
+		{
+			"number": 2,
+			"xpath": "/html/body/ytd-app/div/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/form/button",
+			"wait": 20,
+			"operation": "CLICK"
+		}
+		]
+}

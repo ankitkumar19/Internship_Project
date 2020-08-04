@@ -1,0 +1,16 @@
+{
+	"filedir": [
+		"/home/ankit/project/JSON_files/youtube.json",
+		"/home/ankit/project/JSON_files/pdfdrive.json",
+		"/home/ankit/project/JSON_files/upload.json",
+		"/home/ankit/project/JSON_files/email.json"
+
+	],
+	"datadir": [
+		"/home/ankit/project/JSON_files/youtube_data.json",
+		"/home/ankit/project/JSON_files/pdfdrive_data.json",
+		"/home/ankit/project/JSON_files/upload_data.json",
+		"/home/ankit/project/JSON_files/email_data.json"
+
+	]
+}

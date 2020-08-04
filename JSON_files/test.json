@@ -1,0 +1,119 @@
+{
+	"base_url" : "http://automationpractice.com/index.php",
+	"steps": [
+		{
+			"number": 1,
+			"xpath": "/html/body/div/div[1]/header/div[2]/div/div/nav/div[1]/a",
+			"wait": 10,
+			"operation": "CLICK"
+		},
+		{
+			"number": 2,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/div[1]/form/div/div[2]/input",
+			"wait":10,
+			"operation": "SEND_KEYS"
+		},
+		{
+			"number": 3,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/div[1]/form/div/div[3]/button",
+			"wait": 10,
+			"operation": "CLICK"
+		},
+		{
+			"number": 4,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/form/div[1]/div[1]/div[1]/label/div/span/input",
+			"wait": 10,
+			"operation": "CLICK"
+		},
+		{
+			"number": 5,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/form/div[1]/div[2]/input",
+			"wait":10,
+			"operation": "SEND_KEYS"	
+		},
+		{
+			"number": 6,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/form/div[1]/div[3]/input",
+			"wait":10,
+			"operation": "SEND_KEYS"
+		},
+		{
+			"number": 7,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/form/div[1]/div[5]/input",
+			"wait": 10,
+			"operation": "SEND_KEYS"
+		},
+		{
+			"number": 8,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/form/div[1]/div[6]/div/div[1]/div/select",
+			"wait": 20,
+			"operation": "COMBOBOX"
+		},
+		{
+			"number": 9,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/form/div[1]/div[6]/div/div[2]/div/select",
+			"wait": 20,
+			"operation": "COMBOBOX"
+		},
+		{
+			"number": 10,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/form/div[1]/div[6]/div/div[3]/div/select",
+			"wait": 20,
+			"operation": "COMBOBOX"
+		},
+		{
+			"number": 11,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/form/div[1]/div[7]/div/span/input",
+			"wait": 10,
+			"operation": "CLICK"
+		},
+		{
+			"number": 11,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/form/div[1]/div[8]/div/span/input",
+			"wait": 10,
+			"operation": "CLICK"
+		},
+		{
+			"number": 12,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/form/div[2]/p[3]/input",
+			"wait": 10,
+			"operation": "SEND_KEYS"
+		},
+		{
+			"number": 13,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/form/div[2]/p[4]/input",
+			"wait": 10,
+			"operation": "SEND_KEYS"
+		},
+		{
+			"number": 14,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/form/div[2]/p[6]/input",
+			"wait": 10,
+			"operation": "SEND_KEYS"
+		},
+		{
+			"number": 15,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/form/div[2]/p[7]/div/select",
+			"wait": 20,
+			"operation": "DROPDOWN"
+		},
+		{
+			"number":16,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/form/div[2]/p[8]/input",
+			"wait": 10,
+			"operation": "SEND_KEYS"
+		},
+		{
+			"number": 17,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/form/div[2]/p[13]/input",
+			"wait": 10,
+			"operation": "SEND_KEYS"
+		},
+		{
+			"number": 18,
+			"xpath": "/html/body/div/div[2]/div/div[3]/div/div/form/div[4]/button",
+			"wait":10,
+			"operation": "CLICK"
+		}
+	]
+}

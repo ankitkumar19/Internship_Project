@@ -1,0 +1,23 @@
+{
+	"base_url":"https://www.pdfdrive.com/",
+	"steps" : [
+		{
+			"number": 1,
+			"xpath": "/html/body/div[3]/div[1]/div[1]/div[4]/ul/li[1]/div/div/div[2]/a",
+			"wait" : 10,
+			"operation": "CLICK"
+		},
+		{
+			"number": 2,
+			"xpath": "/html/body/div[3]/div[1]/div[2]/div[3]/div[3]/span/a",
+			"wait": 10,
+			"operation": "CLICK"
+		},
+		{
+	 		"number": 3,
+			"xpath": "/html/body/div[3]/div[1]/div[2]/center/div[2]/div[1]/div/a",
+			"wait": 30,
+			"operation": "CLICK"
+		}
+		]
+}

@@ -1,0 +1,22 @@
+{
+	"base_url" : "https://www.wikipedia.org/",
+	"steps": [
+		{
+			"number": 1,
+			"xpath": "/html/body/div[3]/form/fieldset/div/input",
+			"wait": 10,
+			"operation": "SEND_KEYS"
+		},
+		{
+			"number": 2,
+			"xpath": "/html/body/div[3]/form/fieldset/button",
+			"wait": 10,
+			"operation": "CLICK"
+		},
+		{
+			"number": 3,
+			"wait": 10,
+			"operation": "SCRAPING"
+		}
+	]
+}
