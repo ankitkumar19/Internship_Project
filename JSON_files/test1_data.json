@@ -4,6 +4,7 @@
 			"India"
 		],
 		"attribute":["li"],
-		"class": ["toclevel-1"]
+		"class": ["toclevel-1"],
+		"method": "xpath"
 	}]
 }

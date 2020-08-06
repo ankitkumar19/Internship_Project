@@ -7,5 +7,5 @@
 			"value": ["hello"]
 		}
 	],
-	"method": "xpath"
+	"method": "id"
 }

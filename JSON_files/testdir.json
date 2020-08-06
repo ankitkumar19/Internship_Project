@@ -1,8 +1,9 @@
 {
 	"filedir": [
-		"/home/ankit/project/JSON_files/test1.json"
+		"/home/ankit/project/JSON_files/captcha.json"
+
 	],
 	"datadir": [
-		"/home/ankit/project/JSON_files/test1_data.json"
+		"/home/ankit/project/JSON_files/captcha_data.json"
 	]
 }

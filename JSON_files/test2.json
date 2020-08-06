@@ -1,0 +1,17 @@
+{
+	"base_url":"https://www.wikipedia.org/",
+	"steps": [
+		{
+			"number": 1,
+			"id": "searchInput",
+			"wait": 10,
+			"operation": "SEND_KEYS"
+		},
+		{
+			"number": 2,
+			"id": "search-icon-legacy",
+			"wait": 20,
+			"operation": "CLICK"
+		}
+		]
+}

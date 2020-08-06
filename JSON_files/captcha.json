@@ -1,0 +1,11 @@
+{
+	"base_url":"http://sistemas.cvm.gov.br/?fundosreg",
+	"steps": [
+		{
+			"number": 1,
+			"xpath": "/html/body/form/table/tbody/tr[7]/td[2]/img",
+			"wait": 10,
+			"operation": "CAPTCHA"
+		}
+	]
+}

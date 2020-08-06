@@ -1,7 +1,7 @@
 {
 	"obj1":[{
 		"value":[
-			"abc@kiki.com",
+			"abc1@kiki.com",
 			"ABC",
 			"DEF",
 			"abcdef",
@@ -15,5 +15,6 @@
 			"00000",
 			"9999999999"
 		]
-	}]
+	}],
+	"method": "xpath"
 }
