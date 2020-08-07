@@ -30,6 +30,14 @@ def perform_op(element, operation, value):
 
 
 
+def init_output(driver):
+	url = driver.current_url
+	res = requests.get(url)
+	soup = bs4.BeautifulSoup(res.text,'lxml')
+	get_output(soup,data.get('attribute'),data.get('class'),scrap)
+
+
+
 def get_output(soup,attribute,class_name,scrap):
 	global para_count_output
 	print(attribute , class_name , para_count)
@@ -38,6 +46,7 @@ def get_output(soup,attribute,class_name,scrap):
 	for heading in headings:
 		print(heading.text)
 		scrap.write(str(heading.text))
+
 
 
 
@@ -64,11 +73,12 @@ def find_element(method,i):
 		return driver.find_element_by_css_selector(i.get('css_selector'))
 
 
-def get_captcha(driver,element,path):
+
+def get_captcha(driver,path):
 	driver.switch_to.frame("Main")
-	element1 = driver.find_element_by_xpath(".//*[@id='trRandom3']/td[2]/img")
-	location = element1.location
-	size = element1.size
+	element = find_element(data_file.get('method')[0],i)
+	location = element.location
+	size = element.size
 	driver.save_screenshot(path)
 
 	image = Image.open(path)
@@ -82,11 +92,11 @@ def get_captcha(driver,element,path):
 
 
 try:
-	directory = pd.read_json('/home/ankit/project/JSON_files/testdir.json')
+	directory = pd.read_json('/home/ankit/project/JSON_files/filedir.json')
 	log = open('log.txt','w')
 	scrap = open('scrap.txt','w')
 except Exception as e:
-	log.write('Input : /home/ankit/project/JSON_files/testdir.json, log.txt\n')
+	log.write('Input : /home/ankit/project/JSON_files/filedir.json, log.txt\n')
 	log.write(str(e))
 
 
@@ -96,12 +106,17 @@ except Exception as e:
 	log.write('Input : Driver Instance\n')
 	log.write(str(e))
 
+
+
 cnt = 0 
 data_cnt = 0
 para_count = 0
 para_count_output = 0
 
 driver.maximize_window()
+
+
+
 
 for itern,k in zip(directory.filedir,directory.datadir):
 	try:
@@ -110,7 +125,6 @@ for itern,k in zip(directory.filedir,directory.datadir):
 	except Exception as e:
 		log.write('Input : file, data_file\n')
 		log.write(str(e))
-	# print(file)
 	print(cnt , file.base_url[0])
 
 	try:
@@ -130,13 +144,9 @@ for itern,k in zip(directory.filedir,directory.datadir):
 		for i in file.steps:
 			try:
 				if(i.get('operation') != "SCRAPING" and i.get('operation') != 'CAPTCHA'):
-
-					# element = driver.find_element_by_xpath(i.get('xpath'))	o
-					# print(data_file.get('method')[0])
 					element = find_element(data_file.get('method')[0],i)
-
 					driver.implicitly_wait(i.get('wait'))
-			# print(para_count)
+
 					try:
 						perform_op(element,i.get('operation'),data.get('value'))
 					except Exception as e:
@@ -144,15 +154,12 @@ for itern,k in zip(directory.filedir,directory.datadir):
 						log.write(str(e))
 
 				elif(i.get('operation') == 'CAPTCHA'):
-					element = 'a'
+					# element = find_element(data_file.get('method')[0],i)
 					driver.implicitly_wait(i.get('wait'))
-					get_captcha(driver,element,'./captcha.png')
+					get_captcha(driver,'./captcha.png')
 
 				else:
-					url = driver.current_url
-					res = requests.get(url)
-					soup = bs4.BeautifulSoup(res.text,'lxml')
-					get_output(soup,data.get('attribute'),data.get('class'),scrap)
+					init_output(driver)
 
 			except Exception as e:
 				log.write('Input : xpath\n')
@@ -167,12 +174,6 @@ for itern,k in zip(directory.filedir,directory.datadir):
 			driver.switch_to_window(driver.window_handles[cnt+data_cnt])
 			driver.get(file.base_url[0])
 	cnt = cnt+data_cnt+1
-	try:
-		driver.implicitly_wait(10)
-		driver.switch_to_alert.dismiss()
-	except Exception as e:
-		log.write("Input : Driver Instance\n")
-		log.write(str(e))
 
 time.sleep(10)
 driver.quit()

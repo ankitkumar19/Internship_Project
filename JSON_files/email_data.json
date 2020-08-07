@@ -16,5 +16,6 @@
 				"Automated hello1"
 			]	
 		}
-	]
+	],
+	"method": "xpath"
 }

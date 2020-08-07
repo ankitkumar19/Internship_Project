@@ -6,5 +6,6 @@
 		{
 			"value": ["/home/ankit/project/scrapping1.py"]
 		}
-	]
+	],
+	"method": "xpath"
 }
