@@ -7,7 +7,6 @@ import time
 import bs4
 import requests
 from PIL import Image
-import api
 
 
 
@@ -93,7 +92,7 @@ def get_captcha(driver,path):
 
 
 try:
-	directory = api.get_dir()
+	directory = pd.read_json('/home/ankit/project/JSON_files/filedir.json')
 	log = open('log.txt','w')
 	scrap = open('scrap.txt','w')
 except Exception as e:
@@ -121,8 +120,8 @@ driver.maximize_window()
 
 for itern,k in zip(directory.filedir,directory.datadir):
 	try:
-		file = api.get_json_file(itern)
-		data_file = api.get_json_file(k)
+		file = pd.read_json(itern)
+		data_file = pd.read_json(k)
 	except Exception as e:
 		log.write('Input : file, data_file\n')
 		log.write(str(e))

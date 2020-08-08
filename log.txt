@@ -17,6 +17,18 @@ Input : xpath
 Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/form[1]/div/footer/div/button[3]"}
   (Session info: chrome=84.0.4147.89)
 Input : xpath
+Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div[1]/section/button"}
+  (Session info: chrome=84.0.4147.89)
+Input : xpath
+Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/form[1]/div/div[2]/div[2]/form/div/div/div/input"}
+  (Session info: chrome=84.0.4147.89)
+Input : xpath
+Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/form[1]/div/div[2]/div[5]/input"}
+  (Session info: chrome=84.0.4147.89)
+Input : xpath
+Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/form[1]/div/footer/div/button[3]"}
+  (Session info: chrome=84.0.4147.89)
+Input : xpath
 Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div/div[2]/div/div[3]/div/div/form/div[1]/div[1]/div[1]/label/div/span/input"}
   (Session info: chrome=84.0.4147.89)
 Input : xpath
