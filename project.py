@@ -176,6 +176,8 @@ for itern,k in zip(directory.filedir,directory.datadir):
 			driver.get(file.base_url[0])
 	cnt = cnt+data_cnt+1
 
+
+
 time.sleep(10)
 driver.quit()
 
