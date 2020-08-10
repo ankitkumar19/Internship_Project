@@ -2,7 +2,7 @@
 
 ## Input files 
 
-*1. Json file containing the base url and the steps required for automation.*
+#### *1. Json file containing the base url and the steps required for automation.*
 
 ```json
 {
@@ -23,7 +23,7 @@
 *operation* : The type of operation to be performed on the element.<br>
 
 
-*2. Json file containing the data required for automation.*
+#### *2. Json file containing the data required for automation.*
 ```json
 {
 	"obj1":[
