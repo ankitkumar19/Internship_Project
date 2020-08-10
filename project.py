@@ -13,7 +13,6 @@ import api
 
 def perform_op(element, operation, value):
 	global para_count
-	# print("passed value ", value, "para_count", para_count)
 	if(i.get('operation') == 'CLICK'):
 		element.click()
 	elif(i.get('operation') == 'SEND_KEYS'):
@@ -54,7 +53,6 @@ def get_output(soup,attribute,class_name,scrap):
 
 def find_element(method,i):
 	if(method == 'xpath'):
-		# print(type(driver.find_element_by_xpath(i.get('xpath'))))
 		return driver.find_element_by_xpath(i.get('xpath'))
 	elif(method == 'id'):
 		# driver.implicitly_wait(10)
