@@ -17,10 +17,10 @@
 	]
 }
 ```
-*number* : The step number. (Should be unique)
-*xpath* : Attribute to identify element. (xpath,id,etc)
-*wait* : Amount of time the web driver should wait before performing the required operation.
-*operation* : The type of operation to be performed on the element.
+*number* : The step number. (Should be unique)<br>
+*xpath* : Attribute to identify element. (xpath,id,etc)<br>
+*wait* : Amount of time the web driver should wait before performing the required operation.<br>
+*operation* : The type of operation to be performed on the element.<br>
 
 
 *2. Json file containing the data required for automation.*
@@ -39,8 +39,8 @@
 	"method" : "xpath"
 }	
 ```
-*value* : Arrays of data that is to be entered into the required fields in the order in which they			  are required.
-*method* : Type of attribute to be used to identify element.
+*value* : Arrays of data that is to be entered into the required fields in the order in which they			  are required.<br>
+*method* : Type of attribute to be used to identify element.<br>
 
 
 
