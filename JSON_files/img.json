@@ -1,0 +1,11 @@
+{
+	"base_url": "https://pixabay.com/images/search/wallpaper/",
+	"steps":[
+		{
+			"number":1,
+			"xpath":"/html/body/div[1]/div[2]/div/div[2]/div/div[3]/div[1]/a/img",
+			"wait":10,
+			"operation":"CAPTCHA"
+		}
+	]
+}

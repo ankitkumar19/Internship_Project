@@ -1,0 +1,41 @@
+{
+	"base_url": "https://lgdirectory.gov.in/",
+	"steps":[
+		{
+			"number":1,
+			"xpath":"/html/body/section[5]/div/div/div/div/section[6]/div/div/div/h4/a",
+			"wait":10,
+			"operation":"CLICK"
+		},
+		{
+			"number":2,
+			"xpath":"/html/body/section[2]/div/section/div/form/div[2]/div/label[2]/input",
+			"wait":10,
+			"operation":"CLICK"
+		},
+		{
+			"number":3,
+			"xpath":"/html/body/section[2]/div/section/div/form/div[4]/div[1]/div[1]/select",
+			"wait":20,
+			"operation":"DROPDOWN"
+		},
+		{
+			"number":4,
+			"xpath":"/html/body/section[2]/div/section/div/form/div[4]/div[3]/div/label[1]/input[1]",
+			"wait":10,
+			"operation":"CLICK"
+		},
+		{
+			"number":5,
+			"xpath":"/html/body/section[2]/div/section/div/form/div[4]/div[3]/div/label[2]/input[1]",
+			"wait":10,
+			"operation":"CLICK"
+		},
+		{
+			"number":6,
+			"xpath":"/html/body/section[2]/div/section/div/form/div[18]/div/img",
+			"wait":10,
+			"operation":"CAPTCHA"
+		}
+	]
+}

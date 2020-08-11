@@ -74,20 +74,11 @@ def find_element(method,i):
 
 
 def get_captcha(driver,path):
-	driver.switch_to.frame("Main")
+	# driver.switch_to.frame("Main")
 	element = find_element(data_file.get('method')[0],i)
-	location = element.location
-	size = element.size
-	driver.save_screenshot(path)
-
-	image = Image.open(path)
-	left = location['x']
-	top = location['y']+140
-	right = location['x'] + size['width']
-	bottom = location['y'] + size['height']+140
-	image = image.crop((left,top,right,bottom))
-
-	image.save(path,'png')
+	print(type(element))
+	captcha = open('captcha.png', 'wb')
+	captcha.write(element.screenshot_as_png)
 
 
 try:
@@ -141,8 +132,15 @@ for itern,k in zip(directory.filedir,directory.datadir):
 	for data in data_file.obj1:
 		para_count=0
 		for i in file.steps:
+			print(i.get('number') , i.get('operation'))
 			try:
-				if(i.get('operation') != "SCRAPING" and i.get('operation') != 'CAPTCHA'):
+				if(i.get('operation') == 'CAPTCHA'):
+					# element = find_element(data_file.get('method')[0],i)
+					driver.implicitly_wait(i.get('wait'))
+					# print('hello')
+					get_captcha(driver,'./captcha1.png')
+
+				elif(i.get('operation') != "SCRAPING" and i.get('operation') != 'CAPTCHA'):
 					element = find_element(data_file.get('method')[0],i)
 					driver.implicitly_wait(i.get('wait'))
 
@@ -152,10 +150,12 @@ for itern,k in zip(directory.filedir,directory.datadir):
 						log.write('Input : value\n')
 						log.write(str(e))
 
-				elif(i.get('operation') == 'CAPTCHA'):
-					# element = find_element(data_file.get('method')[0],i)
-					driver.implicitly_wait(i.get('wait'))
-					get_captcha(driver,'./captcha.png')
+				# elif(i.get('operation') == 'CAPTCHA'):
+				# 	# element = find_element(data_file.get('method')[0],i)
+				# 	driver.implicitly_wait(i.get('wait'))
+				# 	e=find_element_by_xpath(i.get('xpath'))
+				# 	print(hello)
+				# 	get_captcha(driver,'./captcha1.png')
 
 				else:
 					init_output(driver)
@@ -176,6 +176,6 @@ for itern,k in zip(directory.filedir,directory.datadir):
 
 
 
-time.sleep(10)
+time.sleep(2)
 driver.quit()
 

@@ -1,3 +1,20 @@
 {
-	"obj1":[{}]
+	"obj1":[{
+		"value":[
+			"abc11@kiki.com",
+			"ABC",
+			"DEF",
+			"abcdef",
+			"2",
+			"3",
+			"1999",
+			"Alphabet",
+			"xyz apt",
+			"z city",
+			"Alabama",
+			"00000",
+			"9999999999"
+		]
+	}],
+	"method": "xpath"
 }
